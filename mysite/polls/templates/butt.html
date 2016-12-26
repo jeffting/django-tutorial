@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Turgler</title>
+  </head>
+  <body>
+    <h1>I am Math</h1><h2 onclick="hidetable()">Secret button</h2>
+    <a href="{% url 'index' %}">go to index</a>
+    <table id="gas">
+      <tr>
+        <th>Name</th>
+        <th>age</th>
+      </tr>
+      <tr>
+        <td>Craig</td>
+        <td>26</td>
+      </tr>
+      <tr>
+        <td>Jeff</td>
+        <td>18</td>
+      </tr>
+    </table>
+  </body>
+</html>
+
+<style>
+</style>
+<script type="text/javascript">
+var COUNT = 0;
+  function hidetable() {
+    COUNT = ++COUNT;
+    if (COUNT == 6){
+      var t = document.getElementById('gas');
+      t.style = "display:None;";
+    }
+  }
+</script>
